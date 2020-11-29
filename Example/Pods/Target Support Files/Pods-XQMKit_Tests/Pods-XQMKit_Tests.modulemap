@@ -1,0 +1,6 @@
+framework module Pods_XQMKit_Tests {
+  umbrella header "Pods-XQMKit_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

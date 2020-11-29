@@ -1,0 +1,27 @@
+PODS:
+  - FBSnapshotTestCase (2.1.4):
+    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
+  - FBSnapshotTestCase/Core (2.1.4)
+  - FBSnapshotTestCase/SwiftSupport (2.1.4):
+    - FBSnapshotTestCase/Core
+  - XQMKit (0.1.0)
+
+DEPENDENCIES:
+  - FBSnapshotTestCase
+  - XQMKit (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - FBSnapshotTestCase
+
+EXTERNAL SOURCES:
+  XQMKit:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
+  XQMKit: 31e9914709461f955ea85d579e4a3daa0f031d41
+
+PODFILE CHECKSUM: 4ce4edcf28b4bc1a76b4b6dac5e0b6d29dba609f
+
+COCOAPODS: 1.9.1

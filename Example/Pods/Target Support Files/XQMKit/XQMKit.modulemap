@@ -1,0 +1,6 @@
+framework module XQMKit {
+  umbrella header "XQMKit-umbrella.h"
+
+  export *
+  module * { export * }
+}
