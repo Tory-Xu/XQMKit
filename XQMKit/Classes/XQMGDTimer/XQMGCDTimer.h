@@ -10,10 +10,10 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface TYGCDTimer : NSObject
+@interface XQMGCDTimer : NSObject
 
 /**
- 创建 TYGCDTimer
+ 创建 XQMGCDTimer
  定时结束自动关闭；如果需要提前关闭，调用 - (void)invalidate 方法
 
  @param ti 时间间隔
@@ -22,7 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param queue 队列，NULL 默认使用 dispatch_get_global_queue(0, 0);
  @param backgroundEnabel 是否能够在后台进行
  @param handle 执行事件（主线程）
- @return TYGCDTimer
+ @return XQMGCDTimer
  */
 + (instancetype)GCDTimerWithTimeInterval:(NSTimeInterval)ti
                                startTime:(NSTimeInterval)startTime

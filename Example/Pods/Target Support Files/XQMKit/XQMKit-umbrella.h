@@ -10,7 +10,9 @@
 #endif
 #endif
 
-#import "TYGCDTimer.h"
+#import "XQMGCDTimer.h"
+#import "AGImageCache.h"
+#import "ImageGIFTool.h"
 
 FOUNDATION_EXPORT double XQMKitVersionNumber;
 FOUNDATION_EXPORT const unsigned char XQMKitVersionString[];

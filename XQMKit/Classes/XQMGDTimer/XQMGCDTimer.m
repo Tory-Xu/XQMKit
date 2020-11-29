@@ -6,7 +6,7 @@
 //  Copyright © 2019 imac. All rights reserved.
 //
 
-#import "TYGCDTimer.h"
+#import "XQMGCDTimer.h"
 #import <UIKit/UIKit.h>
 
 #ifdef DEBUG
@@ -20,7 +20,7 @@
 #define TYWeakSelf(type) __weak typeof(type) weak##type = type;
 #define TYStrongSelf(type) __strong typeof(type) strong##type = type;
 
-@interface TYGCDTimer ()
+@interface XQMGCDTimer ()
 
 @property (nonatomic, strong) dispatch_source_t skipTimer;
 
@@ -49,7 +49,7 @@
 
 @end
 
-@implementation TYGCDTimer
+@implementation XQMGCDTimer
 
 + (instancetype)GCDTimerWithTimeInterval:(NSTimeInterval)ti
                                startTime:(NSTimeInterval)startTime
@@ -63,7 +63,7 @@
         return nil;
     }
     
-    TYGCDTimer *timer = [[[self class] alloc] initWithTimeInterval:ti
+    XQMGCDTimer *timer = [[[self class] alloc] initWithTimeInterval:ti
                                                          startTime:startTime
                                                        repeatTimes:repeatTimes
                                                              queue:queue
