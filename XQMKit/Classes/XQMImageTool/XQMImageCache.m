@@ -1,29 +1,29 @@
 //
-//  AGImageCache.m
+//  XQMImageCache.m
 //  NSCache
 //
 //  Created by yons on 16/11/9.
 //  Copyright © 2016年 yons. All rights reserved.
 //
 
-#import "AGImageCache.h"
-#import "ImageGIFTool.h"
+#import "XQMImageCache.h"
+#import "XQMImageGIFTool.h"
 
-@interface AGImageCache ()
+@interface XQMImageCache ()
 
 @property (nonatomic, strong) NSCache *cache;
 @property (nonatomic, strong) dispatch_queue_t loadImageQueue;
 
 @end
 
-@implementation AGImageCache
+@implementation XQMImageCache
 
-static AGImageCache *obj = nil;
+static XQMImageCache *obj = nil;
 
 + (instancetype)share {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        obj = [[AGImageCache alloc] init];
+        obj = [[XQMImageCache alloc] init];
         NSCache *cache = [[NSCache alloc] init];
         cache.countLimit = 100;
         obj.cache = cache;
@@ -36,12 +36,12 @@ static AGImageCache *obj = nil;
 - (void)imageWithUrlString:(NSString *)urlString complete:(void (^)(UIImage *image))complete {
     NSData *data = [self objectForKey:urlString];
     if (data) {
-        complete([ImageGIFTool animatedGIFWithData:data]);
+        complete([XQMImageGIFTool animatedGIFWithData:data]);
     } else {
         dispatch_async(self.loadImageQueue, ^{
             NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:urlString]];
             [self setObject:data forKey:urlString];
-            UIImage *image = [ImageGIFTool animatedGIFWithData:data];
+            UIImage *image = [XQMImageGIFTool animatedGIFWithData:data];
             dispatch_async(dispatch_get_main_queue(), ^{
                 complete(image);
             });

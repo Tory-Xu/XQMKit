@@ -10,9 +10,13 @@
 #endif
 #endif
 
+#import "NSObject+XQMKit.h"
+#import "UIButton+XQMKit.h"
+#import "UILabel+XQMKit.h"
+#import "UIView+XQMKit.h"
 #import "XQMGCDTimer.h"
-#import "AGImageCache.h"
-#import "ImageGIFTool.h"
+#import "XQMImageCache.h"
+#import "XQMImageGIFTool.h"
 
 FOUNDATION_EXPORT double XQMKitVersionNumber;
 FOUNDATION_EXPORT const unsigned char XQMKitVersionString[];

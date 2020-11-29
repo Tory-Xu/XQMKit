@@ -1,15 +1,15 @@
 //
-//  ImageGIFTool.m
+//  XQMImageGIFTool.m
 //  NSCache
 //
 //  Created by yons on 16/11/9.
 //  Copyright © 2016年 yons. All rights reserved.
 //
 
-#import "ImageGIFTool.h"
+#import "XQMImageGIFTool.h"
 #import <ImageIO/ImageIO.h>
 
-@implementation ImageGIFTool
+@implementation XQMImageGIFTool
 
 // 调用此方法，如果是GIF，则解析；不是，直接返回图片
 + (UIImage *)animatedGIFWithData:(NSData *)data {

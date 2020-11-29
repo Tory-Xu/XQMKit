@@ -1,5 +1,5 @@
 //
-//  ImageGIFTool.h
+//  XQMImageGIFTool.h
 //  NSCache
 //
 //  Created by yons on 16/11/9.
@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@interface ImageGIFTool : NSObject
+@interface XQMImageGIFTool : NSObject
 
 + (UIImage *)animatedGIFWithData:(NSData *)data;
 
