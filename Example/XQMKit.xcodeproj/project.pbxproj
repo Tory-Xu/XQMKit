@@ -64,6 +64,7 @@
 		7D0D43025812B8B4205DAFB1 /* Pods_XQMKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XQMKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8FA8FC490E8A7709CEEFA622 /* Pods-XQMKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XQMKit_Example.debug.xcconfig"; path = "Target Support Files/Pods-XQMKit_Example/Pods-XQMKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		9AE6B8E0257380260093B5A7 /* XQMKit_Example-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XQMKit_Example-Bridging-Header.h"; sourceTree = "<group>"; };
 		A90CD2B3E9C8E7B2005D5D81 /* Pods-XQMKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XQMKit_Example.release.xcconfig"; path = "Target Support Files/Pods-XQMKit_Example/Pods-XQMKit_Example.release.xcconfig"; sourceTree = "<group>"; };
 		B1581A1C33E38B1E18CA84FB /* Pods-XQMKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XQMKit_Tests.release.xcconfig"; path = "Target Support Files/Pods-XQMKit_Tests/Pods-XQMKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		C0BB2BAA4C0C481BCAD34B94 /* Pods-XQMKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XQMKit_Tests.debug.xcconfig"; path = "Target Support Files/Pods-XQMKit_Tests/Pods-XQMKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -140,6 +141,7 @@
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
+				9AE6B8E0257380260093B5A7 /* XQMKit_Example-Bridging-Header.h */,
 			);
 			name = "Example for XQMKit";
 			path = XQMKit;
@@ -248,6 +250,9 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "756165690@qq.com";
 				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						LastSwiftMigration = 1210;
+					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -513,12 +518,16 @@
 			baseConfigurationReference = 8FA8FC490E8A7709CEEFA622 /* Pods-XQMKit_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "XQMKit/XQMKit-Prefix.pch";
 				INFOPLIST_FILE = "XQMKit/XQMKit-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "XQMKit/XQMKit_Example-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				WRAPPER_EXTENSION = app;
 			};
@@ -529,12 +538,15 @@
 			baseConfigurationReference = A90CD2B3E9C8E7B2005D5D81 /* Pods-XQMKit_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "XQMKit/XQMKit-Prefix.pch";
 				INFOPLIST_FILE = "XQMKit/XQMKit-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "XQMKit/XQMKit_Example-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				WRAPPER_EXTENSION = app;
 			};

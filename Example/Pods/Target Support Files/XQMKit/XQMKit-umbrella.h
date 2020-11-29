@@ -10,6 +10,7 @@
 #endif
 #endif
 
+#import "TYGCDTimer.h"
 
 FOUNDATION_EXPORT double XQMKitVersionNumber;
 FOUNDATION_EXPORT const unsigned char XQMKitVersionString[];
